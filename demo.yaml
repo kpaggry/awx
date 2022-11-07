@@ -22,10 +22,10 @@
   gather_facts: false
   connection: local
   tasks:
-    # - name: Lookup and Output Entire Secret from Vault
-    #   debug:
-    #     msg: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=kv/data/my-secret')}}"
-
-    - name: Authenticate with a Vault app role
+    - name: Lookup and Output Entire Secret from Vault
       debug:
-        msg: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=kv/data/my-secret auth_method=approle role_id={{role_id}} secret_id={{secret_id}}') }}"
+        msg: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=kv/data/my-secret auth_method=approle' )}}"
+
+    # - name: Authenticate with a Vault app role
+    #   debug:
+    #     msg: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=kv/data/my-secret auth_method=approle role_id={{role_id}} secret_id={{secret_id}}') }}"
