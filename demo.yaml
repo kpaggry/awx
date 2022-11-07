@@ -5,6 +5,14 @@
       debug:
         msg: "Hello World!"
 
+- name: Fetch from vault
+  uri:
+    url: {{ url }}
+    method: GET
+    headers:
+      X-Vault-Token: {{ token }}
+
+
 - name: Lookup secret from vault
   hosts: localhost
   gather_facts: false
