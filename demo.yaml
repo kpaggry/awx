@@ -17,11 +17,11 @@
         msg:
          - "{{response}}"
 
-# - name: Lookup secret from vault
-#   hosts: localhost
-#   gather_facts: false
-#   connection: local
-#   tasks:
-#     - name: Lookup and Output Entire Secret from Vault
-#       debug:
-#         msg: "{{ lookup('hashi_vault', 'secret=kv/data/my-secret')}}"
+- name: Lookup secret from vault
+  hosts: localhost
+  gather_facts: false
+  connection: local
+  tasks:
+    - name: Lookup and Output Entire Secret from Vault
+      debug:
+        msg: "{{ lookup('hashi_vault', 'secret=kv/data/my-secret')}}"
