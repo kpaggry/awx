@@ -7,10 +7,10 @@
 
 - name: Fetch from vault
   uri:
-    url: {{ url }}
+    url: "{{ url }}"
     method: GET
     headers:
-      X-Vault-Token: {{ token }}
+      X-Vault-Token: "{{ token }}"
 
 
 - name: Lookup secret from vault
