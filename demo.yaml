@@ -12,4 +12,4 @@
   tasks:
     - name: Lookup and Output Entire Secret from Vault
       debug:
-        msg: "{{ lookup('vault', 'secret=kv/data/my-secret')}}"
+        msg: "{{ lookup('hashi_vault', 'secret=kv/data/my-secret')}}"
